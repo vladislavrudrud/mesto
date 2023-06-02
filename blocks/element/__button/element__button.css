@@ -6,8 +6,8 @@
     background-size: 22px 19px;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #FFFFFF;
     border: none;
+    background-color: transparent;
 }
 
 .element__button:hover {

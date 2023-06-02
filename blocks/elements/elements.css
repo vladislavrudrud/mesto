@@ -7,7 +7,7 @@
     column-gap: 17px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 880px) {
     .elements {
         max-width: 282px;
         grid-template-columns: 282px;

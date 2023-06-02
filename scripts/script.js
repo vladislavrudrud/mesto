@@ -7,17 +7,17 @@ const descriptioninput = document.getElementById('description');
 const author = document.querySelector('.profile__author');
 const description = document.querySelector('.profile__description');
 
-popupOpen = () => {
-    popup.classList.add('popup__opened');
+const popupOpen = () => {
+    popup.classList.add('popup_opened');
     nameinput.value = author.textContent;
     descriptioninput.value = description.textContent;
 }
 
-popupClosed = () => {
-    popup.classList.remove('popup__opened');
+const popupClosed = () => {
+    popup.classList.remove('popup_opened');
 }
 
-handleFormSubmit = (evt) => {
+const handleFormSubmit = (evt) => {
     evt.preventDefault();
     author.textContent = nameinput.value;
     description.textContent = descriptioninput.value;
