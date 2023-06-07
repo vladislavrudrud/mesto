@@ -8,6 +8,7 @@
     background-position: center;
     border: none;
     background-color: transparent;
+    flex-shrink: 0;
 }
 
 .element__button:hover {
