@@ -5,7 +5,9 @@
     left: 0;
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    display: none;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
+    transition: opacity .5s ease-out;
+    opacity: 0;
 }
