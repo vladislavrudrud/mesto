@@ -66,12 +66,31 @@ buttonEditProfile.addEventListener("click", function () {
   nameInput.value = authorEdit.textContent;
   descriptionInput.value = descriptionEdit.textContent;
 });
+
+const setOverlayListener = function(evt) {
+  const openPopup = document.querySelector(".popup_opened");
+    if(evt.target === openPopup) {
+      closedPopup(openPopup);
+    };
+} 
+
+const setEscListener = function(evt) {
+  if(evt.keyCode == 27) {
+  const openPopup = document.querySelector('.popup_opened');
+  closedPopup(openPopup);
+}
+}
+
 const openPopup = (popupElement) => {
   popupElement.classList.add("popup_opened");
+  document.addEventListener('click', setOverlayListener);
+  document.addEventListener('keydown', setEscListener);
 };
 
 const closedPopup = (popupElement) => {
   popupElement.classList.remove("popup_opened");
+  document.removeEventListener('click', setOverlayListener);
+  document.removeEventListener('keydown', setEscListener);
 };
 
 const handleFormSubmitEdit = (evt) => {
@@ -95,6 +114,7 @@ buttonCloseAdd.addEventListener("click", function () {
 
 buttonClosePhoto.addEventListener("click", function () {
   closedPopup(popupTypeImage);
+  
 });
 
 formElementEdit.addEventListener("submit", handleFormSubmitEdit);
