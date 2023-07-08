@@ -19,6 +19,8 @@ const popupPhoto = document.querySelector(".popup__photo");
 const popupCaption = document.querySelector(".popup__caption");
 const buttonClosePhoto = popupTypeImage.querySelector(".popup__closed");
 
+const popupFormCard = document.querySelector("#popup-form");
+
 const createCard = ({ name, link }) => {
   const cardElement = cardTemplate.querySelector(".element").cloneNode(true);
   const elementPhoto = cardElement.querySelector(".element__photo");
@@ -59,6 +61,7 @@ const handleFormSubmitAdd = (evt) => {
     link: cardLink.value,
   });
   cardsTemplate.prepend(cardElement);
+  popupFormCard.reset();
   closedPopup(popupAdd);
 };
 buttonEditProfile.addEventListener("click", function () {
@@ -75,7 +78,7 @@ const setOverlayListener = function(evt) {
 } 
 
 const setEscListener = function(evt) {
-  if(evt.keyCode == 27) {
+  if(evt.key === "Escape") {
   const openPopup = document.querySelector('.popup_opened');
   closedPopup(openPopup);
 }
