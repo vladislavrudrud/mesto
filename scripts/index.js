@@ -1,4 +1,4 @@
-import { Card } from "./card.js";
+import { Card } from "./Card.js";
 import { FormValidator } from "./FormValidator.js";
 
 const classValidation = {
@@ -88,12 +88,12 @@ const handleFormSubmitAdd = (evt) => {
   popupFormCard.reset();
   closedPopup(popupAdd);
 };
-buttonEditProfile.addEventListener("click", function () {
+function handleProfileButton() {
   openPopup(popupEdit);
   nameInput.value = authorEdit.textContent;
   descriptionInput.value = descriptionEdit.textContent;
   profileValidation.resetValid();
-});
+};
 
 const setOverlayListener = function(evt) {
   const openPopup = document.querySelector(".popup_opened");
@@ -128,11 +128,11 @@ const handleFormSubmitEdit = (evt) => {
   closedPopup(popupEdit);
 };
 
-buttonAddProfile.addEventListener("click", function () {
+function handleAddCardButton() {
   openPopup(popupAdd);
   cardValidation.resetValid();
   formElementAdd.reset();
-});
+};
 
 buttonCloseEdit.addEventListener("click", function () {
   closedPopup(popupEdit);
@@ -148,6 +148,8 @@ buttonClosePhoto.addEventListener("click", function () {
 
 formElementEdit.addEventListener("submit", handleFormSubmitEdit);
 formElementAdd.addEventListener("submit", handleFormSubmitAdd);
+buttonAddProfile.addEventListener("click", handleAddCardButton );
+buttonEditProfile.addEventListener("click", handleProfileButton);
 
 
 

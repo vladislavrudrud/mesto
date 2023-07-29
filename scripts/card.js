@@ -1,10 +1,4 @@
 export class Card {
-    _getTemplate() {
-        return document
-        .querySelector(this._templateSelector)
-        .content.querySelector(".element")
-        .cloneNode(true);
-    }
     constructor(
         data, handleClickOpen,
         templateSelector
@@ -13,6 +7,12 @@ export class Card {
         this._link = data.link;
         this._templateSelector = templateSelector;
         this._handleClickOpen = handleClickOpen;
+    }
+    _getTemplate() {
+        return document
+        .querySelector(this._templateSelector)
+        .content.querySelector(".element")
+        .cloneNode(true);
     }
     createCard = () => {
         this._cardElement = this._getTemplate();
