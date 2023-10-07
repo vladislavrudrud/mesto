@@ -28,7 +28,7 @@ export class FormValidator {
         if(!inputElement.validity.valid) {
             this._showError(inputElement, inputElement.validationMessage);
         } else {
-            this._hasInvalidInput(inputElement)
+            this._hideError(inputElement)
         }
      }
      _toggleButtonState = () => {

@@ -19,7 +19,7 @@ const userInfo = new UserInfo({
   infoSelector: ".profile__description",
 })
 const createCard = (data) => {
-  const newCard = new Card(data, handleClickOpen, "#template");
+  const newCard = new Card(data, handleCardClick, "#template");
   const cardElement = newCard.createCard();
   return cardElement
 }
@@ -30,7 +30,6 @@ function handleProfileButton() {
   popupProfile.open()
   const elementProfile = userInfo.getUserInfo();
   nameInput.value = elementProfile.name;
-  console.log(nameInput.value)
   descriptionInput.value = elementProfile.info;
   profileValidation.resetValid();
 };
@@ -38,37 +37,35 @@ function handleProfileButton() {
 function handleAddCardButton() {
   popupCard.open();
   cardValidation.resetValid();
-  formElementAdd.reset();
 };
 
 function handleFormSubmitEdit(data) {
   userInfo.setUserInfo(data);
 };
 
-function handleFormSubmitAdd(dataAdd) {
-  const cardElement = createCard(dataAdd);
-  popupCardList.addItem(cardElement);
-  console.log(dataAdd)
+function handleFormSubmitAdd(data) {
+  const cardElement = createCard(data);
+  cardList.addItem(cardElement);
 };
 
-function handleClickOpen(link, name) {
+function handleCardClick(link, name) {
   popupImage.open(name, link);
 }
 
 
 
-const popupCardList = new Section(
+const cardList = new Section(
   {
     items: initialCards,
     renderer: (item) => {
       const cardElement = createCard(item);
-      popupCardList.addItem(cardElement);
+      cardList.addItem(cardElement);
     },
   },
   ".elements"
 );
 
-popupCardList.renderItems();
+cardList.renderItems();
 
 buttonAddProfile.addEventListener("click", handleAddCardButton );
 buttonEditProfile.addEventListener("click", handleProfileButton);
@@ -77,12 +74,3 @@ profileValidation.enableValidation();
 popupCard.setEventListeners();
 popupProfile.setEventListeners();
 popupImage.setEventListeners();
-
-
-
-
-
-
-
-
-

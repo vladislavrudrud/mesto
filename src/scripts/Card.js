@@ -1,12 +1,12 @@
 export class Card {
     constructor(
-        data, handleClickOpen,
+        data, handleCardClick,
         templateSelector
     ) {
         this._name = data.name;
         this._link = data.link;
         this._templateSelector = templateSelector;
-        this._handleClickOpen = handleClickOpen;
+        this.handleCardClick = handleCardClick;
     }
     _getTemplate() {
         return document
@@ -34,7 +34,7 @@ export class Card {
         });
       
         this._elementPhoto.addEventListener("click", () => {
-            this._handleClickOpen(this._link, this._name )
+            this.handleCardClick(this._link, this._name )
         });
         return this._cardElement;
       };
