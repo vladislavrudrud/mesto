@@ -3,16 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./pages/index.css">
+        <!-- <link rel="stylesheet" href="./pages/index.css"> -->
         <title>Mesto</title>
     </head>
     <body class="page">
         <header class="header">
-            <img class="header__logo" src="images/Vector.svg" alt="Логотип">
+            <img class="header__logo" src="<%=require('./images/Vector.svg')%>" alt="Логотип">
         </header>
         <main class="content">
             <section class="profile">
-                <img class="profile__avatar" src="images/image.jpg" alt="Аватар">
+                <img class="profile__avatar" src="<%=require('./images/image.jpg')%>" alt="Аватар">
                 <div class="profile__info">
                     <div class="profile__edit">
                         <h1 class="profile__author">Жак-Ив Кусто</h1>
@@ -45,10 +45,10 @@
                     <form class="popup__form popup__form_type_profile" name="edit-button" novalidate>
                         <h2 class="popup__title">Редактировать профиль</h2>
                         <div class="popup__inputs">
-                        <input type="text" class="popup__input popup__input-author" minlength="2" maxlength="40" id="name" name="author" placeholder="Имя" required>
-                        <span class="popup__input-error" id="author-error"></span>
-                        <input type="text" class="popup__input" id="description" minlength="2" maxlength="200" name="comment" placeholder="О себе" required>
-                        <span class="popup__input-error" id="comment-error"></span>
+                        <input type="text" class="popup__input popup__input-author" minlength="2" maxlength="40" id="name" name="name" placeholder="Имя" required>
+                        <span class="popup__input-error" id="name-error"></span>
+                        <input type="text" class="popup__input" id="description" minlength="2" maxlength="200" name="info" placeholder="О себе" required>
+                        <span class="popup__input-error" id="info-error"></span>
                         </div>
                         <button class="popup__add popup__add_invalid" type="submit">Сохранить</button>
                     </form>
@@ -60,10 +60,10 @@
                     <form class="popup__form popup__form_type_card" id="popup-form" name="add-button" novalidate>
                         <h2 class="popup__title">Новое место</h2>
                         <div class="popup__inputs">
-                        <input type="text" class="popup__input popup__input-add" minlength="2" maxlength="30" id="card-name" name="card-name" placeholder="Название" required>
-                        <span class="popup__input-error" id="card-name-error"></span>
-                        <input type="url" class="popup__input" id="card-link" minlength="2" maxlength="30" name="card-link" placeholder="Ссылка на картинку" required>
-                        <span class="popup__input-error" id="card-link-error"></span>
+                        <input type="text" class="popup__input popup__input-add" minlength="2" maxlength="30" id="card-name" name="name" placeholder="Название" required>
+                        <span class="popup__input-error" id="name-error"></span>
+                        <input type="url" class="popup__input" id="card-link" minlength="2" maxlength="100" name="link" placeholder="Ссылка на картинку" required>
+                        <span class="popup__input-error" id="link-error"></span>
                         </div>
                         <button class="popup__add popup__add_invalid" type="submit">Создать</button>
                     </form>
@@ -78,6 +78,6 @@
                     </div>
                 </div>
             </div>
-        <script src="./scripts/index.js" type="module"></script>
+        <!-- <script src="../src/pages/index.js" type="module"></script> -->
     </body>
 </html>
