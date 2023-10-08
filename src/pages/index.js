@@ -46,7 +46,6 @@ function handleFormSubmitEdit(data) {
 function handleFormSubmitAdd(data) {
   const cardElement = createCard(data);
   cardList.addItem(cardElement);
-  console.log(data)
 };
 
 function handleCardClick(link, name) {

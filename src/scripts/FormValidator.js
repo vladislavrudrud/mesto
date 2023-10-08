@@ -8,14 +8,14 @@ export class FormValidator {
         this._buttonElement = this._formElement.querySelector(this._listSelector.submitButtonSelector);
     }
      _showError = (inputElement, errorMessage) => {
-        const errorElement = this._formElement.querySelector(`#${inputElement.name}-error`);
+        const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.add(this._listSelector.inputErrorClass);
         errorElement.textContent = errorMessage;
         console.log(errorElement);
      }
       
      _hideError = (inputElement) => {
-        const errorElement = this._formElement.querySelector(`#${inputElement.name}-error`);
+        const errorElement = this._formElement.querySelector(`#${inputElement.id}-error`);
         inputElement.classList.remove(this._listSelector.inputErrorClass);
         errorElement.textContent = '';
       }
