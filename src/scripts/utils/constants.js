@@ -53,5 +53,9 @@ const popupCaption = document.querySelector(".popup__caption");
 const buttonClosePhoto = popupTypeImage.querySelector(".popup__closed");
 const popupFormCard = document.querySelector("#popup-form");
 const cardListSelector = document.querySelector(".elements");
+const popupAvatar = document.querySelector(".popup__avatar")
+const buttonPopupAvatar = document.querySelector(".profile__avatar_button");
+const formElementAvatar = document.querySelector(".popup__form_avatar");
+const avatar = document.querySelector(".profile__avatar");
 
-export {buttonEditProfile, buttonAddProfile, initialCards, classValidation, nameInput, descriptionInput, cardListSelector, formElementAdd, formElementEdit}
+export {buttonEditProfile, buttonAddProfile, initialCards, classValidation, nameInput, descriptionInput, cardListSelector, formElementAdd, formElementEdit, popupAvatar, buttonPopupAvatar, formElementAvatar, avatar}
