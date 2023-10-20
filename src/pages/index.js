@@ -18,7 +18,7 @@ const api = new Api({
 });
 
 let userId;
-//
+
 Promise.all([api.getInitialCards(), api.getUserInfo()])
 .then(([initialCards, userData]) => {
   console.log(userData.about)
