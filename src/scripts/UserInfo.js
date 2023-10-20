@@ -12,9 +12,9 @@ export class UserInfo {
         };
         return userInfo;
     };
-    setUserInfo({ name, info, avatar }) {
+    setUserInfo({ name, about, avatar }) {
         this.nameUser.innerText = name;
-        this.infoUser.innerText = info;
+        this.infoUser.innerText = about;
         this.photoUser.src = avatar;
     };
 };
