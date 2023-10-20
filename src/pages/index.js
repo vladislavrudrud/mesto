@@ -124,7 +124,7 @@ const cardList = new Section({
   ".elements"
 );
 
-const confirmationRemoveCard = new PopupConfirmation(".popup__remove-card");
+const confirmationRemoveCard = new PopupConfirmation(".popup-remove");
 
 const popupCard = new PopupWithForm(".popup_add_button", (formData) => {
   popupCard.buttonStatus(true);
