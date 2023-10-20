@@ -54,7 +54,7 @@ const popupProfile = new PopupWithForm(".popup_edit_button", (data) => {
   }
 )
 
-const popupAvatar = new PopupWithForm(".popup__avatar", (data) => {
+const popupAvatar = new PopupWithForm(".popup_avatar", (data) => {
   popupAvatar.buttonStatus(true);
   api.editUserPhoto(data)
   .then((data) => {
@@ -124,7 +124,7 @@ const cardList = new Section({
   ".elements"
 );
 
-const confirmationRemoveCard = new PopupConfirmation(".popup__remove_card");
+const confirmationRemoveCard = new PopupConfirmation(".popup__remove-card");
 
 const popupCard = new PopupWithForm(".popup_add_button", (formData) => {
   popupCard.buttonStatus(true);

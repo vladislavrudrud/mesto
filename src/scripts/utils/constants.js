@@ -53,8 +53,8 @@ const popupCaption = document.querySelector(".popup__caption");
 const buttonClosePhoto = popupTypeImage.querySelector(".popup__closed");
 const popupFormCard = document.querySelector("#popup-form");
 const cardListSelector = document.querySelector(".elements");
-const popupAvatar = document.querySelector(".popup__avatar")
-const buttonPopupAvatar = document.querySelector(".profile__avatar_button");
+const popupAvatar = document.querySelector(".popup_avatar");
+const buttonPopupAvatar = document.querySelector(".profile__avatar-button");
 const formElementAvatar = document.querySelector(".popup__form_avatar");
 const avatar = document.querySelector(".profile__avatar");
 
