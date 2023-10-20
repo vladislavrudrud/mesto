@@ -428,6 +428,9 @@ template {
     border-radius: 50%;
     object-fit: cover;
     margin: 0 30px 0 0;
+    display: block;
+    background-repeat: no-repeat;
+    object-position: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -545,6 +548,27 @@ template {
         margin: 0 auto 0;
     }
 }
+ .profile__avatar_button {
+  background-image: url(images/Vector1.a086f758840ae814ecde.svg);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .8s ease;
+}
+
+.profile__avatar_button:hover {
+  opacity: .8;
+  background-color: #000;
+}
+
+.profile__container {
+    display: flex;
+}
 .elements {
     max-width: 880px;
     margin: 51px auto 66px;
@@ -618,7 +642,6 @@ template {
 .element__button {
     width: 22px;
     height: 19px;
-    margin: 30px 20px 30px auto;
     background-image: url(images/VectorLove.87ed371465c7a6a1cd01.svg);
     background-size: 22px 19px;
     background-repeat: no-repeat;
@@ -626,6 +649,8 @@ template {
     border: none;
     background-color: transparent;
     flex-shrink: 0;
+    margin-top: 10px;
+
 }
 
 .element__button:hover {
@@ -634,6 +659,19 @@ template {
 }
 .element__button-active {
     background-image: url(images/Union.e787eeb70bb65b7b453a.svg);
+}
+.element__like_sum {
+    color: #000000;
+    text-align: center;
+    font-size: 13px;
+    line-height: 123%;
+}
+.element__like_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 28px;
+    margin: 10px 20px 0 auto;
 }
 .footer {
     max-width: 880px;
@@ -852,5 +890,18 @@ template {
     color: #000;
 }
 
+.popup__button_remove {
+    margin: 0 36px 36px;
+    background-color: black;
+    font-size: 18px;
+    color: white;
+    opacity: 1;
+}
+.popup__button_remove:hover {
+    opacity: 0.8;
+}
+.popup__title_remove {
+    margin: 34px auto 32px 36px;
+}
 
 
