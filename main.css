@@ -548,7 +548,7 @@ template {
         margin: 0 auto 0;
     }
 }
- .profile__avatar_button {
+ .profile__avatar-button {
   background-image: url(images/Vector1.a086f758840ae814ecde.svg);
   width: 120px;
   height: 120px;
@@ -561,7 +561,7 @@ template {
   transition: .8s ease;
 }
 
-.profile__avatar_button:hover {
+.profile__avatar-button:hover {
   opacity: .8;
   background-color: #000;
 }
@@ -890,14 +890,14 @@ template {
     color: #000;
 }
 
-.popup__button_remove {
+.popup__button-remove {
     margin: 0 36px 36px;
     background-color: black;
     font-size: 18px;
     color: white;
     opacity: 1;
 }
-.popup__button_remove:hover {
+.popup__button-remove:hover {
     opacity: 0.8;
 }
 .popup__title_remove {
