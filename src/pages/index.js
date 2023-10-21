@@ -192,7 +192,3 @@ function handleAddCardButton() {
   cardValidation.resetValid();
 }
 buttonAddProfile.addEventListener("click", handleAddCardButton);
-
-cardValidation.enableValidation();
-profileValidation.enableValidation();
-avatarValidation.enableValidation();
